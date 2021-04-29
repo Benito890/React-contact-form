@@ -24,7 +24,7 @@ function ContactForm() {
     setUserComment('');
     setUserEmail('');
     setUserFirstName('');
-    setUserLastName('')
+    setUserLastName('');
   };
 
   return (
