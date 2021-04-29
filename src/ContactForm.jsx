@@ -21,6 +21,10 @@ function ContactForm() {
       body: JSON.stringify(postComment),
     };
     fetch('http://localhost:5000/comments', requestOptions).then((response) => response.json());
+    setUserComment('');
+    setUserEmail('');
+    setUserFirstName('');
+    setUserLastName('')
   };
 
   return (
@@ -31,22 +35,22 @@ function ContactForm() {
           <div>
             <label htmlFor="name">firstname</label>
             <br></br>
-            <input className="input-quote" type="text" onChange={(e) => setUserFirstName(e.target.value)} required />
+            <input className="input-quote" value={userFirstName} type="text" onChange={(e) => setUserFirstName(e.target.value)} required />
           </div>
           <div>
             <label htmlFor="name">lastname</label>
             <br></br>
-            <input className="input-quote" type="text" onChange={(e) => setUserLastName(e.target.value)} required />
+            <input className="input-quote" value={userLastName} type="text" onChange={(e) => setUserLastName(e.target.value)} required />
           </div>
           <div>
             <label htmlFor="name">e-mail</label>
             <br></br>
-            <input className="input-quote" type="text" onChange={(e) => setUserEmail(e.target.value)} required />
+            <input className="input-quote" value={userEmail} type="text" onChange={(e) => setUserEmail(e.target.value)} required />
           </div>
           <div>
             <label htmlFor="message">comment</label>
             <br></br>
-            <textarea className="textarea-quote" type="text" onChange={(e) => setUserComment(e.target.value)} required></textarea>
+            <textarea className="textarea-quote" value={userComment} type="text" onChange={(e) => setUserComment(e.target.value)} required></textarea>
           </div>
           <div>
             <button type="submit">Envoyer</button>
