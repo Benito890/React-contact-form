@@ -1,2 +1,3 @@
-# contact-form
-simple React.js contact-form using hooks to store data and fetch to send it (server/api/db)
+# React-Contact-Form
+
+Simple React.js contact-form using hooks to store data and fetch to send it to server/api/db.
